@@ -1,0 +1,51 @@
+//Amanjot Singh Gill
+//Student id-A00246495
+//Mobile application development (MAPD) Sub:JAV-1001
+// This program is going to have
+//1.Collect a numeric value from the user and store it in an appropriate variable.
+//2.Collect the current unit of measurement
+//3.Determine the appropriate conversion (in either direction, ie the user can enter km or mi)
+//4.Display the new result
+import java.util.Scanner;
+
+public class Lab01 {
+    public static void main(String[] args)
+    {
+        //Conversions
+        //Enter the numerical value you want to convert.
+        Scanner type = new Scanner(System.in);
+        System.out.println("Give the value for conversion:");
+        int enteredNumber = type.nextInt();
+        //Enter the units to convert
+        System.out.println("Provide the units(km,mi,cm,in,oz,g,kg,lb) of entered value:");
+        String unit = type.next();
+        System.out.println("your entered number is :" + enteredNumber + unit);
+
+        if(unit.equals("km")){
+            System.out.println("your conversion in 'mi' is : " + enteredNumber * 0.62);
+        }
+        else if (unit.equals("mi")){
+            System.out.println("your conversion in 'km' is : " + enteredNumber * 1.61);
+        } else if (unit.equals("cm")) {
+            System.out.println("your conversion in 'in' is : " + enteredNumber * 0.39);
+        } else if (unit.equals("in")) {
+            System.out.println("your conversion in 'cm' is : " + enteredNumber * 2.54);
+
+        } else if (unit.equals("kg")) {
+            System.out.println("your conversion in 'lb' is : " + enteredNumber * 2.2);
+
+        } else if (unit.equals("lb")) {
+            System.out.println("your conversion in 'kg' is : " + enteredNumber * 0.45);
+
+        } else if (unit.equals("g")) {
+            System.out.println("your conversion in 'oz' is : " + enteredNumber * 0.04);
+        } else if (unit.equals("oz")) {
+            System.out.println("your conversion in 'g' is : " + enteredNumber * 28.35);
+
+        }else {
+            System.out.println("Enter Value is Wrong");
+        }
+    }
+}
+
+
